@@ -23,20 +23,39 @@ namespace Harjoitus1MediaPlayer
         public MainWindow()
         {
             InitializeComponent();
+            LoadMediaFile();
+        }
+        private void LoadMediaFile()
+        {
+            try
+            {
+                //ladataan mediatiedosto
+                string filu = @"D:\H8855\CoffeeMaker.mp4";
+                //tutkitaan onko tiedosto olemassa
+                if (System.IO.File.Exists(filu))
+                {
+                    mediaElement.Source = new Uri(filu);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            //soitetaan mediatiedosto
-            string filu = @"D:\H8855\testi.mp4";
-            //tutkitaan onko tiedosto olemassa
-            if (System.IO.File.Exists(filu))
-            {
-                //MessageBox.Show("Soitetaan tiedosto: " + filu);
-                mediaElement.Source = new Uri(filu);
-                mediaElement.Play();
-            }
-            
+            mediaElement.Play();         
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Pause();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Stop();
         }
     }
 }
