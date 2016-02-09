@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="240" Width="750">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Etunimi" Padding="4" Margin="3" Height="25"/>
+                    <TextBlock Text="Sukunimi" Padding="4" Margin="3" Height="25"/>
+                    <TextBlock Text="Siirtohinta" Padding="4" Margin="3" Height="25"/>
+                    <TextBlock Text="Seura" Padding="4" Margin="3" Height="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBox x:Name="txtEtunimi" Margin="3" Height="25" Width="150"/>
+                    <TextBox x:Name="txtSukunimi" Margin="3" Height="25" Width="150"/>
+                    <TextBox x:Name="txtSiirtohinta" Margin="3" Height="25" Width="150"/>
+                    <ComboBox x:Name="cmbSeura" Margin="3" Height="25" Width="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Button x:Name="btnLuoPelaaja" Content="Luo pelaaja" Margin="3" Height="25" Width="150" Click="btnLuoPelaaja_Click"/>
+                    <Button x:Name="btnTalletaPelaaja" Content="Talleta pelaaja" Margin="3" Height="25" Width="150" Click="btnTalletaPelaaja_Click"/>
+                    <Button x:Name="btnPoistaPelaaja" Content="Poista pelaaja" Margin="3" Height="25" Width="150" Click="btnPoistaPelaaja_Click"/>
+                    <Button x:Name="btnKirjoitaPelaajat" Content="Kirjoita pelaajat" Margin="3" Height="25" Width="150" Click="btnKirjoitaPelaajat_Click"/>
+                    <Button x:Name="btnLopeta" Content="Lopeta" Margin="3" Height="25" Width="150"/>
+                </StackPanel>
+                <ListBox Name="lbData" Width="330" SelectionChanged="lbData_SelectionChanged"/>
+            </StackPanel>
+            <StatusBar Height="28"/>
+        </StackPanel>
     </Grid>
 </Window>
