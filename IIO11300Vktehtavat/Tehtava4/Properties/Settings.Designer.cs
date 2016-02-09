@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace H3Mittausdata.Properties
+namespace Tehtava4.Properties
 {
 
 

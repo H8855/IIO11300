@@ -12,9 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using JAMK.IT.IIO11300;
 
-namespace H3Mittausdata
+namespace Tehtava4
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,19 +23,6 @@ namespace H3Mittausdata
         public MainWindow()
         {
             InitializeComponent();
-            IniMyStuff();
-        }
-        private void IniMyStuff()
-        {
-            //omat ikkunaan liittyvät alustukset
-            txtToday.Text = DateTime.Today.ToShortDateString();
-        }
-
-        private void btnSaveData_Click(object sender, RoutedEventArgs e)
-        {
-            //luodaan uusi mittausdata-olio ja näytetään se käyttäjälle
-            MittausData md = new MittausData(txtClock.Text, txtData.Text);
-            lbData.Items.Add(md);
         }
     }
 }
