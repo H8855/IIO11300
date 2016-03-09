@@ -60,5 +60,11 @@ namespace H6Databinding
             clicked--;
             myGrid.DataContext = joukkueet[clicked];
         }
+
+        private void btnShowPlayers2_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerWindow win = new PlayerWindow();
+            win.ShowDialog();
+        }
     }
 }
