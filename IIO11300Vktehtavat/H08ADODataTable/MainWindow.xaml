@@ -1,0 +1,28 @@
+﻿<Window x:Class="H08ADODataTable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H08ADODataTable"
+        mc:Ignorable="d"
+        Title="ViiniAsiakkaat" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel x:Name="spList">
+                <Button x:Name="btnGetData" Content="Hae asiakkaat" Click="btnGetData_Click"/>
+                <ComboBox x:Name="cbCities" ItemsSource="{Binding}" SelectionChanged="cbCities_SelectionChanged"/>
+                <ListBox x:Name="lbCustomers" ItemsSource="{Binding}" Width="150" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="lbCustomers_SelectionChanged" />
+            </StackPanel>
+            <StackPanel x:Name="spCustomer">
+                <TextBlock>Etunimi</TextBlock>
+                <TextBox Text="{Binding Path=Firstname}"/>
+                <TextBlock>Sukunimi</TextBlock>
+                <TextBox Text="{Binding Path=Lastname}"/>
+                <TextBlock>Osoite</TextBlock>
+                <TextBox Text="{Binding Path=Address}"/>
+                <TextBlock>Kaupunki</TextBlock>
+                <TextBox Text="{Binding Path=City}"/>
+            </StackPanel>                
+        </StackPanel>
+    </Grid>
+</Window>
