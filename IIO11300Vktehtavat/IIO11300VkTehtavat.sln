@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H7ADOConsoleDemo", "H7ADOCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H08ADODataTable", "H08ADODataTable\H08ADODataTable.csproj", "{BBFF693C-311A-4443-92BB-8E32CEA75E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H9BookshopORM", "H9BookshopORM\H9BookshopORM.csproj", "{EEC0319A-C28F-483F-B9CC-366E47B6A842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{BBFF693C-311A-4443-92BB-8E32CEA75E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBFF693C-311A-4443-92BB-8E32CEA75E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBFF693C-311A-4443-92BB-8E32CEA75E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC0319A-C28F-483F-B9CC-366E47B6A842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC0319A-C28F-483F-B9CC-366E47B6A842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC0319A-C28F-483F-B9CC-366E47B6A842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC0319A-C28F-483F-B9CC-366E47B6A842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
