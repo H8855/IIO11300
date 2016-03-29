@@ -1,0 +1,47 @@
+﻿<Window x:Class="H9BookshopORM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H9BookshopORM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <Button x:Name="btnGetTestBooks" Content="Hae testikirjat" Click="btnGetTestBooks_Click"/>
+                    <Button x:Name="btnGetSQLBooks" Content="Hae SQL-kirjat" Click="btnGetSQLBooks_Click"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Name="SpBook">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="45">Tuote</TextBlock>
+                        <TextBlock x:Name="tbProduct" Text="{Binding}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="45">Nimi</TextBlock>
+                        <TextBox x:Name="txtName" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="45">Kirjailija</TextBlock>
+                        <TextBox x:Name="txtAuthor" Text="{Binding Path=Author, UpdateSourceTrigger=PropertyChanged}"  Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="45">Maa</TextBlock>
+                        <TextBox x:Name="txtCountry" Text="{Binding Path=Country, UpdateSourceTrigger=PropertyChanged}"  Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="45">Vuosi</TextBlock>
+                        <TextBox x:Name="txtYear" Text="{Binding Path=Year, UpdateSourceTrigger=PropertyChanged}"  Width="200"/>
+                    </StackPanel>
+                    <Button x:Name="btnSave" Content="Tallenna" Click="btnSave_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <DataGrid x:Name="dgBooks" AutoGenerateColumns="True" Height="Auto" Width="Auto" ItemsSource="{Binding}" SelectionChanged="dgBooks_SelectionChanged"/>
+            <StatusBar>
+                <TextBlock x:Name="tbMessage" Text="Tähän ilmoitukset" Height="16"/>
+            </StatusBar>
+        </StackPanel>
+    </Grid>
+</Window>
